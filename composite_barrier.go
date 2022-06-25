@@ -4,6 +4,7 @@ import "math"
 
 type compositeBarrier []*Cursor
 
+// > If there's only one sequence, return it, otherwise return a composite barrier
 func NewCompositeBarrier(sequences ...*Cursor) Barrier {
 	if len(sequences) == 1 {
 		return sequences[0]
